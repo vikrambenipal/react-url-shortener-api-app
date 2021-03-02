@@ -19,13 +19,22 @@ const LinkContainer = styled.div`
         margin: 0 auto;
         cursor: pointer;
     }
+    textarea {
+        visibility: hidden;
+        height: 0;
+    }
 `
 
 const Link = ({ link }) => {
 
     const handleCopy = (e) => {
         e.target.innerText = "Copied!";
-        console.log(e.target.previousSibling);
+        const short_link = document.createElement('textarea');
+        short_link.value = e.target.previousSibling.innerText;
+        document.body.appendChild(short_link);
+        short_link.select();
+        document.execCommand('copy');
+        document.body.removeChild(short_link);
     }
     return (
         <LinkContainer>
