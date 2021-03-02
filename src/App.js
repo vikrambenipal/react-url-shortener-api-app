@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import Form from './components/Form';
 import Nav from './components/Nav';
 import Card from './components/Card';
@@ -8,18 +9,33 @@ import brand_rec from './images/icon-brand-recognition.svg';
 import detailed_rec from './images/icon-detailed-records.svg';
 import fully_cust from './images/icon-fully-customizable.svg';
 
+const HeroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  img {
+    max-width: 100%;
+    margin-left: 80px;
+    margin-top: 30px;
+  }
+`
+
 const App = () => {
   return (
     <div className="App">
       <Nav />
-      <div>
+      <HeroContainer>
+        <img src={illustration} alt=""></img>
         <div>
           <h1>More than just shorter links</h1>
           <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
           <button>Get Started</button>
         </div>
-        <img src={illustration} alt=""></img>
-      </div>
+      </HeroContainer>
       <Form />
 
       <h2>Advanced Statistics</h2>

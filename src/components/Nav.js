@@ -37,7 +37,7 @@ const Nav = () => {
                 <h2>Shortly</h2>
                 <FontAwesomeIcon onClick={menuHandler} className="menu" icon={faBars} size="lg" color="#9E9AA8" />
             </Row>
-            <Menu isHidden={menuState}/>
+            {menuState && <Menu />}
         </div>
     )
 }
