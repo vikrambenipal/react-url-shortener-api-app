@@ -45,12 +45,20 @@ const StatisticsContainer = styled.div`
   justify-content: center;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
+  padding-top: 30px;
+  //margin-bottom: 50px;
+  background-color: #EFF1F7;
   p {
     width: 80%;
     line-height: 30px;
     margin: 0 auto;
   }
+`
+const CardList = styled.div`
+  background-color: #EFF1F7;
+  padding-bottom: 30px;
+  margin-top: 70px;
 `
 
 const App = () => {
@@ -70,13 +78,14 @@ const App = () => {
       <StatisticsContainer>
         <h2>Advanced Statistics</h2>
         <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+          <CardList>
+            <Card icon={brand_rec} title={"Brand Recognition"} info={"Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."}/>
+            <Card icon={detailed_rec} title={"Detailed Records"} info={"Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."}/>
+            <Card icon={fully_cust} title="Fully Customizable" info={"Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."}/>
+        </CardList>
       </StatisticsContainer>
 
-      <div>
-        <Card icon={brand_rec} title={"Brand Recognition"} info={"Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."}/>
-        <Card icon={detailed_rec} title={"Detailed Records"} info={"Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."}/>
-        <Card icon={fully_cust} title={"Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."}/>
-      </div>
+      
 
       <div>
         <h2>Boost your links today</h2>
