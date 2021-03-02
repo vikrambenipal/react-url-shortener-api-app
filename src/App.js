@@ -61,6 +61,30 @@ const CardList = styled.div`
   margin-top: 70px;
 `
 
+const BoostContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #3A3054;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h2 {
+    color: white;
+  }
+  button {
+    background-color: #2BD0D0;
+    color: white;
+    border: none;
+    border-radius: 28px;
+    height: 48px;
+    width: 40%;
+    margin-bottom: 30px;
+  }
+`
+
 const App = () => {
   return (
     <div className="App">
@@ -85,12 +109,10 @@ const App = () => {
         </CardList>
       </StatisticsContainer>
 
-      
-
-      <div>
+      <BoostContainer>
         <h2>Boost your links today</h2>
         <button>Get Started</button>
-      </div>
+      </BoostContainer>
 
       <Footer />
     </div>

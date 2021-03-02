@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components';
 import fb from '../images/icon-facebook.svg';
 import ig from '../images/icon-instagram.svg';
 import twitter from '../images/icon-twitter.svg';
