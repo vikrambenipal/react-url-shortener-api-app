@@ -22,6 +22,35 @@ const HeroContainer = styled.div`
     margin-left: 80px;
     margin-top: 30px;
   }
+  p {
+    width: 80%;
+    line-height: 30px;
+    margin: 0 auto;
+  }
+  button {
+    background-color: #2BD0D0;
+    color: white;
+    border: none;
+    border-radius: 28px;
+    height: 48px;
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+`
+const StatisticsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  p {
+    width: 80%;
+    line-height: 30px;
+    margin: 0 auto;
+  }
 `
 
 const App = () => {
@@ -38,8 +67,10 @@ const App = () => {
       </HeroContainer>
       <Form />
 
-      <h2>Advanced Statistics</h2>
-      <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+      <StatisticsContainer>
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+      </StatisticsContainer>
 
       <div>
         <Card icon={brand_rec} title={"Brand Recognition"} info={"Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."}/>

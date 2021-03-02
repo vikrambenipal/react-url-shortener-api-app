@@ -9,6 +9,26 @@ const FormContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    background-color: #3A3054;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 90%;
+    .text, .submit {
+        border: none;
+        width: 80%;
+        height: 48px;
+        border-radius: 5px;
+    }
+    .text {
+        padding-left: 15px;
+        box-sizing: border-box; // really useful 
+    }
+    .submit {
+        margin-top: 20px;
+        background-color: #2BD0D0;
+        color: white;
+    }
 `
 
 const Form = () => {
@@ -37,8 +57,8 @@ const Form = () => {
         <div>
             <form onSubmit={submitHandler}>
                 <FormContainer>
-                    <input type="text" onChange={textHandler} placeholder="Shorten a link here..."></input>
-                    <input type="submit" value="Shorten It!"></input>
+                    <input className="text" type="text" onChange={textHandler} placeholder="Shorten a link here..."></input>
+                    <input className="submit" type="submit" value="Shorten It!"></input>
                 </FormContainer>
             </form>
             {list.map((link, i) => {
