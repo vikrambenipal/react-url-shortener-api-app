@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Link from './Link';
@@ -38,6 +38,8 @@ const Form = () => {
     const [link, setLink] = useState("");
     // list of shortened links created
     const [list, setList] = useState([]);
+    // error message
+    const [error, setError] = useState("");
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -45,7 +47,10 @@ const Form = () => {
             method: 'get',
         }).then((e) => {
             setList([...list, e.data.result]);
+            setError("");
             console.log(e);
+        }).catch((error) => {
+            setError("Please add a link");
         })
 
     }
@@ -59,6 +64,7 @@ const Form = () => {
             <form onSubmit={submitHandler}>
                 <FormContainer>
                     <input className="text" type="text" onChange={textHandler} placeholder="Shorten a link here..."></input>
+                    {error}
                     <input className="submit" type="submit" value="Shorten It!"></input>
                 </FormContainer>
             </form>
